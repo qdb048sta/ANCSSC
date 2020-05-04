@@ -134,7 +134,7 @@
     </div>
     <div class="mySlides fade">
         <div class="numbertext">2 / 2</div>
-        <a class="btn" href='Frontend_SDGs.php'><img src="All_SDGs.png" style="width:100%"></a>
+        <a class="btn" href='Frontend_SDGs_NGO.php'><img src="All_SDGs.png" style="width:100%"></a>
     </div>
 </div>
 

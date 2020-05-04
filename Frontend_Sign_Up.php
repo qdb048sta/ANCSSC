@@ -165,14 +165,6 @@ if (isset($_POST['submit'])) {
         margin-right: 4vw;
     }
 
-    .project_description {
-        font-size: calc(7px + 0.9vw);
-        width: 80vw;
-        margin-left:10vw;
-        margin-top: 1.5vw;
-        /*padding-bottom: 1.5vw;*/
-    }
-
     /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 60vw) {
         .col-25, .col-75, .input[type=submit] {
@@ -245,11 +237,6 @@ if (isset($_POST['submit'])) {
             <div class="col-75">
                 <input class="input" type="password" id="password" name="password_confirmation"
                        placeholder="Confirm password: *">
-            </div>
-        </div>
-        <div class="row">
-            <div class="project_description">After signing up, the ANCSSC will review your
-                application, and it may be 1-2 days before your login details work
             </div>
         </div>
         <div class="row">

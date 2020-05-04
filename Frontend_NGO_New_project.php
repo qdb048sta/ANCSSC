@@ -372,7 +372,7 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="row">
         <input class="input" type="submit" name="submit" value="Save Project">
-        <a class="cancel_button" href="Frontend_NGO_My_Projects.php">Cancel</a>
+        <a class="cancel_button" href="Frontend_Admin_Navigation_Page.php">Cancel</a>
     </div>
 </form>
 
