@@ -176,7 +176,7 @@ if($result = mysqli_query($link, $NGO_approve_query))
 	while($row = mysqli_fetch_assoc($result)) {
 		$userid = $row['id_user'];
 		$userStr = json_encode($row);
-		echo <<<EOT
+		echo '
 		<tr>
 			<td scope="row">
 				NGO  Number $userid
@@ -203,7 +203,7 @@ if($result = mysqli_query($link, $NGO_approve_query))
 				</form>
 			</td>
 		</tr>
-EOT;		
+';		
 	}
     echo "</tbody>";
     echo "</table>";
