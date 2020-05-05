@@ -182,7 +182,7 @@ echo <<<EOT
 				NGO  Number $userid
 			</td>	
 			<td>
-				<button class="inspect_button" onclick="var user = $userStr; PopUpShow(user);">
+				<button class="inspect_button" onclick='var user = $userStr; PopUpShow(user);'>
 					Inspect
 				</button>
 			</td>
