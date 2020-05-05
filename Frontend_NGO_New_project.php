@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
                         `project_email`, `project_phone`, `project_website`, `project_sdg`, `project_timeline`, `project_budget`, 
                         `project_beneficiaries`) VALUES ('{$_POST['sector_id']}', '{$_SESSION['user']['id_user']}', '{$_POST['projectname']}', 
                                                          '{$_POST['projectsummary']}', '{$_POST['projectdescription']}', '{$_POST['keywords']}', 
-                                                         '{$_POST['NGOname']}', '{$_POST['Location']}', '{$_POST['ContactName']}', '{$_POST['ContactEmail']}', 
+                                                         '{$_SESSION['user']['ngo_name']}', '{$_POST['Location']}', '{$_POST['ContactName']}', '{$_POST['ContactEmail']}', 
                                                          '{$_POST['ContactNumber']}', '{$_POST['Website']}', '{$_POST['sdg_id']}', '{$_POST['Date']}', '{$_POST['project_budget']}', 
                                                          '{$_POST['project_beneficiaries']}')";
     $queryResult = mysqli_query($link, $query_insert);
@@ -22,7 +22,13 @@ if (isset($_POST['submit'])) {
     }
 }
 
+$stmt = $link->prepare("SELECT * FROM users WHERE id_user = ?");
+$stmt -> bind_param("i", $_SESSION['user']['id_user']);
+$stmt -> execute();
+$result = $stmt->get_result(); // get the mysqli result
+$project_user = $result->fetch_assoc(); // fetch data
 ?>
+
 
 <html>
 <head>
@@ -340,10 +346,10 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="col-2">
         <div class="info_card">
-
             <ul class="fa-ul">
                 <li><span class="fa-li"><i class="fas fa-briefcase"></i></span>
-                    <input class="card_text" type="text" id="NGOname" name="NGOname" placeholder="NGO name"></li>
+                    <label class="card_text" for="projectname"><?php echo($project_user['ngo_name']);?></label>
+                </li>
                 <li><span class="fa-li"><i class="fas fa-location-arrow"></i></span>
                     <input class="card_text" type="text" id="Location" name="Location" placeholder="Project Location"></li>
                 <li><span class="fa-li"><i class="far fa-dollar"></i></span><select class="card_text" type="text" name="project_budget">
@@ -372,7 +378,7 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="row">
         <input class="input" type="submit" name="submit" value="Save Project">
-        <a class="cancel_button" href="Frontend_Admin_Navigation_Page.php">Cancel</a>
+        <a class="cancel_button" href="Frontend_NGO_My_Projects.php">Cancel</a>
     </div>
 </form>
 
