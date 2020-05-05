@@ -1,4 +1,4 @@
-<?php $link = mysqli_connect("localhost", "root", "root", "website_database");
+<?php $link = mysqli_connect("0067team2.mysql.database.azure.com", "team2design@0067team2", "!Mmaplestory123", "test");
 
 
 if ($link == null) {
