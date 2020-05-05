@@ -1,4 +1,4 @@
-<?php $link = mysqli_connect("localhost", "root", "root", "ANCSSC");
+<?php $link = mysqli_connect("localhost", "root", "root", "website_database");
 
 
 if ($link == null) {
