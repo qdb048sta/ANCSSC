@@ -180,7 +180,7 @@ $project_data = $result->fetch_assoc(); // fetch data
 $linker = 'Frontend_Edit_Projects.php?id_project=' . $project_data['id_project'] . '';
 $ngo_name = $_SESSION['user']['ngo_name'];
 
-$stmt1 = $link->prepare("SELECT * FROM SDG WHERE id_sdg = ?");
+$stmt1 = $link->prepare("SELECT * FROM sdg WHERE id_sdg = ?");
 $stmt1-> bind_param("i", $project_data['project_sdg']);
 $stmt1 -> execute();
 $result1 = $stmt1->get_result(); // get the mysqli result
