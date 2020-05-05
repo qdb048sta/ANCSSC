@@ -176,13 +176,13 @@ if($result = mysqli_query($link, $NGO_approve_query))
 	while($row = mysqli_fetch_assoc($result)) {
 		$userid = $row['id_user'];
 		$userStr = json_encode($row);
-		echo '
+echo '
 		<tr>
 			<td scope="row">
 				NGO  Number $userid
 			</td>	
 			<td>
-				<button class="inspect_button" onclick='var user = $userStr; PopUpShow(user);'>
+				<button class="inspect_button" onclick="var user = $userStr; PopUpShow(user);">
 					Inspect
 				</button>
 			</td>
