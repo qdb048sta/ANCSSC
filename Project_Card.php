@@ -260,12 +260,15 @@ $project_user = $result3->fetch_assoc(); // fetch data
         </div>
     </div>
     <div class="row">
-        <?php if ($ngo_name = $project_user['ngo_name']){
+        <?php if ($project_data['project_ngo_name'] == $_SESSION['user']['ngo_name']){
             echo '<a class="button" href=';
             echo $linker;
             echo '>Edit Project</a>';
+            echo '<a class="cancel_button" href="Frontend_NGO_My_Projects.php">Cancel</a>';
+        }
+        else {
+            echo '<a class="cancel_button" style="margin-left: 50vw;" href="Frontend_NGO_My_Projects.php">Cancel</a>';
         }?>
-        <a class="cancel_button" href="Frontend_NGO_My_Projects.php">Cancel</a>
     </div>
 </div>
 
