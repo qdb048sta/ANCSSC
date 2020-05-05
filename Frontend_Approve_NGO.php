@@ -172,11 +172,11 @@ require "db_connect.php";
 $NGO_approve_query="SELECT * FROM users WHERE ngo_status = 0";
 if($result = mysqli_query($link, $NGO_approve_query))
 {
-	echo"<table class='table'><tbody>";
-	while($row = mysqli_fetch_assoc($result)) {
-		$userid = $row['id_user'];
-		$userStr = json_encode($row);
-echo '
+echo"<table class='table'><tbody>";
+while($row = mysqli_fetch_assoc($result)) {
+$userid = $row['id_user'];
+$userStr = json_encode($row);
+echo <<<EOT
 		<tr>
 			<td scope="row">
 				NGO  Number $userid
@@ -203,10 +203,10 @@ echo '
 				</form>
 			</td>
 		</tr>
-';		
-	}
-    echo "</tbody>";
-    echo "</table>";
+EOT;
+}
+echo "</tbody>";
+echo "</table>";
 }
 ?>
 </body>
