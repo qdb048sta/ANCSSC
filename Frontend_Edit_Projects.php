@@ -270,7 +270,7 @@ require 'db_connect.php';
             $SDG_sector_array[$k]['sectors'][] = array("sec_id" => $row2['id_sectors'], "sec_name" => $row2['sector_name']);
         }
     }
-    $stmt1 = $link->prepare("SELECT * FROM SDG WHERE id_sdg = ?");
+    $stmt1 = $link->prepare("SELECT * FROM sdg WHERE id_sdg = ?");
     $stmt1-> bind_param("i", $project_data['project_sdg']);
     $stmt1 -> execute();
     $result1 = $stmt1->get_result(); // get the mysqli result
