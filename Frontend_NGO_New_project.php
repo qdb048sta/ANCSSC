@@ -241,7 +241,7 @@ if (isset($_POST['submit'])) {
 
     require 'Frontend_header_universal.php';
 
-    $query = "SELECT * FROM SDG order by sdg_num";
+    $query = "SELECT * FROM sdg order by sdg_num";
 
     $queryResult = mysqli_query($link, $query);
     if ($queryResult == null) {
