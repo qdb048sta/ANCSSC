@@ -60,7 +60,7 @@
 
 require 'db_connect.php';
 
-$queryResult = mysqli_query($link, "SELECT * FROM SDG order by sdg_num");
+$queryResult = mysqli_query($link, "SELECT * FROM sdg order by sdg_num");
 if ($queryResult == null) {
     echo "First query error";
     exit;
