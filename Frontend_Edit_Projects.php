@@ -244,7 +244,7 @@ require 'db_connect.php';
     $form_link = 'edit_projects.php?id_project=' . $project_data['id_project'] . '';
     $cancel_link = 'Project_Card.php?id_project=' . $project_data['id_project'] .'';
 
-    $query = "SELECT * FROM SDG order by sdg_num";
+    $query = "SELECT * FROM sdg order by sdg_num";
 
     $queryResult = mysqli_query($link, $query);
     if ($queryResult == null) {
