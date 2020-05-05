@@ -136,7 +136,7 @@ if ($rowcount == 0) {
             echo '</a>';
             echo '</td>';
             echo '<td class="table_entries">';
-            $stmt1 = $link->prepare("SELECT * FROM SDG WHERE id_sdg = ?");
+            $stmt1 = $link->prepare("SELECT * FROM sdg WHERE id_sdg = ?");
             $stmt1-> bind_param("i", $row['project_sdg']);
             $stmt1 -> execute();
             $result1 = $stmt1->get_result(); // get the mysqli result
