@@ -158,10 +158,11 @@ if(isset($_GET['res'])){
 	echo '<div class="result">';
 	switch( $_GET['res'] ) {
 		case 'approve_ok':
-			echo 'The user was successfully deleted.';
+			echo 'The user has been successfully confirmed.';
 			break;
 		case 'delete_ok':
-			echo 'The user has been successfully confirmed.';
+			
+			echo 'The user was successfully deleted.';
 			break;
 	}
 	echo '</div>';
