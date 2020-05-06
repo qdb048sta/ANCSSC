@@ -96,6 +96,21 @@ $usable_budget_data = json_encode($intermediate_budget_data);
         margin-left: 10vw;
     }
 
+    .column {
+        float: left;
+        width: 50%;
+    }
+
+    .chart-container {
+        width: 100%;
+        margin-left: 3vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+    }
 
 </style>
 
@@ -113,14 +128,22 @@ $usable_budget_data = json_encode($intermediate_budget_data);
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
-<div class="chart-container" style="position: relative; height:calc(100vw + 40px); width:100%;">
-    <div class="row">
-        <canvas id="SDGchart"></canvas>
+<div class="row">
+    <div class="column">
+        <div class="chart-container">
+            <canvas id="SDGchart"></canvas>
+        </div>
     </div>
-    <div class="row">
-        <canvas id="budgetChart"></canvas>
+    <div class="column">
+        <div class="chart-container">
+            <canvas id="budgetChart"></canvas>
+        </div>
     </div>
 </div>
+<!--    <div class="row">-->
+<!--        <canvas id="budgetChart"></canvas>-->
+<!--    </div>-->
+<!--</div>-->
 <script>
     var ctx = document.getElementById('SDGchart').getContext('2d');
     var myPieChart = new Chart(ctx, {
