@@ -93,7 +93,7 @@ function get_primary_key($result)
 }
 
 require('../db_connect.php');
-$result = mysqli_query($link, "SHOW TABLES FROM website_database WHERE tables_in_website_database != 'projects_sectors_sdg' AND tables_in_website_database != 'sdg_sectors'");
+$result = mysqli_query($link, "SHOW TABLES FROM ANCSSC WHERE tables_in_ANCSSC != 'projects_sectors_sdg' AND tables_in_ANCSSC != 'sdg_sectors'");
 $check = mysqli_num_rows($result);
 if ($check == 0){
     die('No tables to be displayed');
