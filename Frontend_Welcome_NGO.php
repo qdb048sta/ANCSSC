@@ -134,7 +134,7 @@
     </div>
     <div class="mySlides fade">
         <div class="numbertext">2 / 2</div>
-        <a class="btn" href='Frontend_SDGs_NGO.php'><img src="All_SDGs.png" style="width:100%"></a>
+        <a class="btn" href='Frontend_SDGs.php'><img src="All_SDGs.png" style="width:100%"></a>
     </div>
 </div>
 
@@ -204,7 +204,7 @@ else {
         echo '</a>';
         echo '</td>';
         echo '<td class="table_entries">';
-        $stmt1 = $link->prepare("SELECT * FROM sdg WHERE id_sdg = ?");
+        $stmt1 = $link->prepare("SELECT * FROM SDG WHERE id_sdg = ?");
         $stmt1-> bind_param("i", $row['project_sdg']);
         $stmt1 -> execute();
         $result1 = $stmt1->get_result(); // get the mysqli result
