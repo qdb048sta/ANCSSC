@@ -99,7 +99,7 @@
     a.username {
         position: absolute;
         top: 3.4vw;
-        left: 75vw;
+        left: 77.5vw;
         background-color: white;
         color: #4E515B;
         border-radius: 20px;
@@ -113,14 +113,14 @@
     .profilepicture {
         height: 2vw;
         position: absolute;
-        right: 1vw;
+        left: 75vw;
         top: 2.9vw;
     }
 
     a.logout {
         position: absolute;
         top: 2.7vw;
-        left: 83vw;
+        right: 1vw;
         background-color: white;
         padding: 0.6vw 2.3vw;
         color: #4E515B;

@@ -100,7 +100,7 @@
         color: #4E515B;
         border-radius: 20px;
         text-decoration: none;
-        right: 4.5vw;
+        left: 74.5vw;
         top: 3.4vw;
         font-weight: bold;
         font-family: sans-serif;
@@ -115,7 +115,7 @@
         height: 2vw;
         width: auto;
         position: absolute;
-        right: 1vw;
+        left: 72vw;
         top: 2.9vw;
     }
 
@@ -130,13 +130,12 @@
         border-radius: 17px;
         border-color: firebrick;
         text-decoration: none;
-        left: 72vw;
+        right: 1vw;
         top: 2.7vw;
         font-weight: bold;
         font-family: sans-serif;
         font-size:  calc(4px + 0.9vw);
         z-index: 1;
-        margin-right: 2vw;
     }
 
     a.logout:hover {
@@ -157,16 +156,16 @@
 
     <a class='my_projects' href='Frontend_NGO_My_Projects.php' title='my projects'>MY PROJECTS</a>
 
-    <a class='add_project' href='Frontend_NGO_New_project.php' title='add project'>ADD PROJECTS</a>
+    <a class='add_project' href='Frontend_NGO_New_project.php' title='add project'>ADD PROJECT</a>
 
     <a class='search' href='Frontend_Search.php' title='search'>SEARCH</a>
 
-    <a class='logout' href='auth_logout.php' title='logout'>LOGOUT</a>
+    <img class='profilepicture' src="profile_pic.png">
 
     <a class='username' href='Frontend_View_NGO_Details.php'
        title='my profile'><?php echo $_SESSION['user']['username']; ?></a>
 
-    <img class='profilepicture' src="profile_pic.png">
+    <a class='logout' href='auth_logout.php' title='logout'>LOGOUT</a>
 </div>
 
 
