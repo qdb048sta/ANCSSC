@@ -371,7 +371,7 @@ $project_user = $result->fetch_assoc(); // fetch data
                 <li><span class="fa-li"><i class="fas fa-laptop"></i></span>
                     <input class="card_text" type="text" id="Website" name="Website" placeholder="NGO Website"></li>
                 <li><span class="fa-li"><i class="far fa-calendar"></i></span>
-                    <input class="card_text" type="text" id="Date" name="Date" placeholder="Dates from/to"></li>
+                    <input class="card_text" type="text" id="Date" name="Date" placeholder="Dates, e.g. 2018 - 2020"></li>
                 </li>
             </ul>
         </div>
