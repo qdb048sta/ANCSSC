@@ -60,11 +60,12 @@
         background-image: linear-gradient(#016311, #02a61f);
         color: white;
         border-color: black;
-        padding: 1vw 2vw 1vw 2vw;
+        padding: calc(1vw + 2px) calc(2vw + 5px) calc(1vw + 2px) calc(2vw + 5px);
         font-family: sans-serif;
         border-radius: 4px;
-        font-size: calc(7px + 1.2vw);
-        margin-left: 60vw;
+        font-size: calc(10px + 1.4vw);
+        float: right;
+        margin-left: 85vw;
         text-decoration: none;
     }
 
@@ -113,7 +114,9 @@ if ($rowcount == 0) {
 ?>
 
 <div class="main_title"><?php echo $_SESSION['user']['username'].$project_sdg['sdg_name'];?> Projects</div>
-
+<div class="row">
+    <a class="approve_button" href="Frontend_NGO_New_project.php"><b>+</b></a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -171,8 +174,4 @@ if ($rowcount == 0) {
     </tbody>
 </table
 
-<div class="row">
 
-<div class="row">
-    <a class="approve_button" href="Frontend_NGO_New_project.php"><b>Add New<br>Project ></b></a>
-</div>
